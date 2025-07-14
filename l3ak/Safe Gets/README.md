@@ -2,7 +2,6 @@ Safe Gets:
 
 ![image](https://github.com/Nvkiero/CTF_2025/blob/main/l3ak/Safe%20Gets/Picture/Screenshot%202025-07-14%20101141.png)
 
-<prev>
 ```c
   char s[259]; // [rsp+0h] [rbp-110h] BYREF
   char temp; // [rsp+103h] [rbp-Dh]
@@ -21,4 +20,4 @@ Safe Gets:
   puts(s);
   return 0;
 ```
-</prev>
+
