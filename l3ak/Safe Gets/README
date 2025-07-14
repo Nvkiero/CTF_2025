@@ -17,4 +17,4 @@ Safe Gets:
   puts("Reversed string:");
   puts(s);
   return 0;
-```
+
