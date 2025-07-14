@@ -67,4 +67,9 @@ try:
     proc.stdin.flush()
 ```
 Ta thấy nó thực hiện qua đoạn check payload < 0xff(255) không thì sẽ exit. \
+Python có hỗ trợ sử dụng UTF-8 -> 1 char có thể chứa nhiều byte
+mà hàm len() trong python chỉ check số lượng char nên khi check len(payload) ta có thể nhập nhiều byte hơn 255. \
+Sử dụng chatgpt để check các kí tự UTF-8 nhiều hơn 1 byte -> 💣 chứa 4 byte để biểu diễn. \
+-> Tính toán để viết payload = NULL byte + 💣 padding + win() + 8
+
 
