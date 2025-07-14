@@ -1,2 +1,20 @@
 Safe Gets:
 ![image](https://github.com/Nvkiero/CTF_2025/blob/main/l3ak/Safe%20Gets/Picture/Screenshot%202025-07-14%20101141.png)
+```c
+  char s[259]; // [rsp+0h] [rbp-110h] BYREF
+  char temp; // [rsp+103h] [rbp-Dh]
+  int len; // [rsp+104h] [rbp-Ch]
+  unsigned __int64 i; // [rsp+108h] [rbp-8h]
+
+  gets(s);
+  len = strlen(s);
+  for ( i = 0LL; i < len / 2; ++i )
+  {
+    temp = s[len - 1 - i];
+    s[len - 1 - i] = s[i];
+    s[i] = temp;
+  }
+  puts("Reversed string:");
+  puts(s);
+  return 0;
+```
