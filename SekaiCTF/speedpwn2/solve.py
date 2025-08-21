@@ -115,7 +115,7 @@ def main():
     reset(1, 1)
     reset(10, 10)
     reset(20, 20)
-    write = [0x40, 0x10, 0x40, 0, 0, 0]
+    write = [0xe0, 0x10, 0x40, 0, 0, 0] # puts[plt]
     for i in range(len(write)):
         point(0, (-0x80+i), write[i])
     reset(16, 8)
