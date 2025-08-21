@@ -1,0 +1,6 @@
+services:
+  outdated:
+    build:
+      context: .
+    ports:
+      - "1337:1337"
